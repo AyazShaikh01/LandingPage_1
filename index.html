@@ -1,20 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NFT Landing Page</title>
+    <title>NFTs</title>
+
+    <!-- RemixIcon -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
 
     <!-- Tailwind & CSS -->
     <link rel="stylesheet" href="style.css">
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
 </head>
-<body>
-    <div id="wrapper">
-        
+
+<body class="overflow-x-hidden bg-gray-900 text-white">
+    <div id="wrapper" class="w-screen h-full">
+        <div id="hero" class="w-full h-full">
+            <nav class="w-full h-full flex justify-between items-center bg-neutral-800 text-white text-xl px-9 py-2">
+                <div id="logo" class="flex justify-center items-center gap-2 font-bold">
+                    <img class="w-13 rounded-full"
+                        src="https://img.freepik.com/free-vector/nft-non-fungible-token-concept-with-neon-light-effect_1017-41102.jpg?t=st=1741916221~exp=1741919821~hmac=582f52880fc192964de534e3ad21ffd6868c83acf597b3eb7529ef49b7df3096&w=826"
+                        alt="logo">
+                    <h1>NFTs</h1>
+                </div>
+                <div id="toggleButton" class="scale-150 md:hidden">
+                    <button id="toggleDown"><i class="ri-menu-3-line"></i></button>
+                    <button id="toggleUp" class="hidden"><i class="ri-close-large-fill"></i></button>
+                </div>
+                <div id="links" class="hidden md:block">
+                    <ul class="flex justify-center items-center gap-10">
+                        <li><a href="#">Have a Look</a></li>
+                        <li><a href="#">Community</a></li>
+                        <div id="buttons" class="flex justify-center items-center gap-3">
+                            <button class="px-4 py-1 rounded-full bg-yellow-300 text-black">Sign IN</button>
+                            <button class="px-4 py-1 rounded-full bg-yellow-300 text-black">Create Account</button>
+                        </div>
+                    </ul>
+                </div>
+            </nav>
+            <div id="sideBar" class="w-full h-full bg-neutral-800 hidden p-5">
+                <ul class="flex flex-col justify-center items-center gap-2 mx-4">
+                    <li class="border-b-1 text-white w-150 text-center"><a href="#">Have a Look</a></li>
+                    <li class="border-b-1 text-white w-125 text-center"><a href="#">Community</a></li>
+                    <button class="mt-2 w-100 text-center p-1 rounded-full bg-yellow-300 text-black">Sign
+                        IN</button>
+                    <button class="w-75 text-center p-1 rounded-full bg-yellow-300 text-black">Create
+                        Account</button>
+                </ul>
+            </div>
+            <main class="w-full h-full pb-30 flex flex-col md:flex-row justify-center items-center">
+                <div id="content"
+                    class="w-full h-full text-2xl p-6 flex flex-col justify-center items-start">
+                    <h1 class="font-bold text-4xl md:text-7xl mt-10">Let's <span class="text-yellow-500">Collect</span> ExtraOrdinary <span class="text-yellow-500">NFTs</span></h1>
+                    <p class="font-medium">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem nisi
+                        voluptatem odio.</p>
+                    <div id="buttons" class="my-5 flex flex-col justify-center items-start gap-2 text-2xl text-white">
+                        <button class="text-center px-4 rounded-lg bg-green-500">Discover</button>
+                        <button class="text-center px-4 rounded-lg border-1">Learn More</button>
+                    </div>
+                    <div id="numbers" class="text-xl flex justify-center items-center gap-6 font-bold">
+                        <div id="likes">
+                            <h2>432k+</h2>
+                            <p>Likes</p>
+                        </div>
+                        <div id="shares">
+                            <h2>200K+</h2>
+                            <p>Shares</p>
+                        </div>
+                        <div id="comments">
+                            <h2>10K+</h2>
+                            <p>Comments</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="Cards"
+                    class="w-full h-150 relative p-5 flex flex-col justify-center items-center gap-2">
+                    <div id="card1" class="flex flex-col justify-start items-center h-90 w-60 absolute top-20 left-10 md:left-10 lg:left-[10vw] -rotate-10 bg-neutral-700 rounded-lg">
+                        <div class="w-full flex justify-center items-center" id="img1">
+                            <img class="p-3 w-full h-full object-cover rounded-3xl" src="https://imgs.search.brave.com/bHGb9-4UG0S3YdWr3q8L4CA49hlIw1gm6fZ7djPA8fA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9uZnQt/bW9ua2V5LmNvbS93/cC1jb250ZW50L3Vw/bG9hZHMvMjAyMy8w/My83YmQwMWY3YjJi/YTYwYWI5YzZhOTdk/OWEwMDM3YjcwZS0x/LnBuZw" alt="ape1">
+                        </div>
+                        <div class="information px-1 py-3">
+                            <div id="nftInfo1" class="w-full font-bold flex justify-between items-center gap-10">
+                                <h1>CrackedApe 101</h1>
+                                <h2>40K likes</h2>
+                            </div>
+                            <div id="User1" class="w-full font-bold flex justify-start items-center">
+                                <img class="w-8 h-8 rounded-full bg-top" src="https://imgs.search.brave.com/Z5fQbSAOs96_RxpsooWzZLxNHbluF5nDgj0XJOheVrs/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/cHJvZC53ZWJzaXRl/LWZpbGVzLmNvbS82/MmJkYzkzZTljY2Nm/YjQzZTE1NTEwNGMv/NjY4YTE0MGQyZTI1/ZjgzNTA2MmE3ZjY2/X0ZyaWV6YSUyMDQw/MHg0MDAlMjBwZnAl/MjAoMTkpLnBuZw" alt="user1">
+                                <h2>mr.BOmM</h2>
+                            </div>
+                            <div id="Growth1" class="w-full font-bold flex justify-between items-center">
+                                <h1>Price - 4.3$</h1>
+                                <h2>1.3% <i class="ri-funds-fill"></i></h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="card2" class="flex flex-col justify-start items-center h-90 w-60 absolute top-80 right-10 md:right-10 lg:right-[10vw] rotate-15 bg-gray-800 rounded-lg">
+                        <div class="w-full flex justify-center items-center" id="img1">
+                            <img class="p-3 w-full h-full object-cover rounded-3xl" src="https://imgs.search.brave.com/thl_GoedoMenUHr2QAfzsV0ua5SuHeuQK2Ds3cZ2dLY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9uZnQt/bW9ua2V5LmNvbS93/cC1jb250ZW50L3Vw/bG9hZHMvMjAyMy8w/My9mYWY2ODdiZTQ0/ZTU4ZmRmOGE2YzNm/NjkwNjJmMjY4Yy0x/LTEwMjR4MTAyNC5w/bmc" alt="ape2">
+                        </div>
+                        <div class="information px-1 py-3">
+                            <div id="nftInfo1" class="w-full font-bold flex justify-between items-center gap-10">
+                                <h1>kingKong</h1>
+                                <h2>100K likes</h2>
+                            </div>
+                            <div id="User2" class="w-full font-bold flex justify-start items-center">
+                                <img class="w-8 h-8 rounded-full bg-top" src="https://imgs.search.brave.com/pKm5aANd3YI200DNGYABZflqLEZzQx0iv6x7GHsK2PA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/cHJvZC53ZWJzaXRl/LWZpbGVzLmNvbS82/MmJkYzkzZTljY2Nm/YjQzZTE1NTEwNGMv/NjY4OWZlNGFjYTZk/NWIyMjcyMjJkN2E0/X1Vzb3BwJTIwNDAw/eDQwMCUyMHBmcCUy/MCgxKS5wbmc" alt="user2">
+                                <h2>God D. Ussop</h2>
+                            </div>
+                            <div id="Growth2" class="w-full font-bold flex justify-between items-center">
+                                <h1>Price - 14.3$</h1>
+                                <h2>14.6% <i class="ri-funds-fill"></i></h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
     </div>
 
     <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="script.js"></script>
 </body>
+
 </html>
